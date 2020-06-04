@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button'
  * @returns HTML object
  */
 const CommonButton = ({ ...props }) => {
-    const { txtBtn, sizeWidth, onPress, center, type, className } = props;
+    const { color, txtBtn, sizeWidth, onPress, center, type, className } = props;
     return (
         <Button
             type={type === '' || type === undefined ? "submit" : type}

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import CardBody from '../../components/CardBody/CardBody';
 import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
+import { APP_NAME } from '../../config/config';
 
 /**
  * Welcome Component ( full view for public homePage )
@@ -31,24 +32,25 @@ export class Welcome extends Component {
     render() {
         return (
             <CardBody>
-                <h4>TEST APP</h4>
-                <hr></hr>
-                <PrimaryButton
-                    color={"light"}
-                    txtBtn={"Login"}
-                    sizeWidth={"15rem"}
-                    onPress={this.login}
-                >
-                </PrimaryButton>
-
-                <PrimaryButton
-                    color={"light"}
-                    txtBtn={"Registro"}
-                    sizeWidth={"15rem"}
-                    onPress={this.register}
-                >
-                </PrimaryButton>
+                <div className={"col-md-4 col-sm-5 col-xs-11 col-lg-4 container-sm"}>
+                    <h2 className={'mb-5'}>{APP_NAME}</h2>
+                    <PrimaryButton
+                        color={"light"}
+                        txtBtn={"Ingresar"}
+                        sizeWidth={"100%"}
+                        onPress={this.login}
+                    >
+                    </PrimaryButton>
+                    <PrimaryButton
+                        color={"light"}
+                        txtBtn={"Registrarme"}
+                        sizeWidth={"100%"}
+                        onPress={this.register}
+                    >
+                    </PrimaryButton>
+                </div>
             </CardBody>
+
         )
     }
 }

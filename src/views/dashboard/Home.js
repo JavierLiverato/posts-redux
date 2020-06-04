@@ -15,12 +15,21 @@ export class Home extends Component {
         return (
             <CardBody>
                 <div className={this.props.className}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quod eaque consectetur sed vel omnis, nulla neque at culpa. Et magnam fuga eaque repellendus maiores sapiente dolores minus! Perferendis, nobis!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt numquam neque nesciunt ipsam odio quas debitis esse, asperiores dolorum repellat odit laboriosam quae quaerat aperiam, ut labore necessitatibus et aliquid!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dignissimos quos corporis eius quasi! Non deleniti voluptatum, consectetur sequi quae eum magni minus alias similique ipsum a laboriosam facere ratione.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis commodi iusto repellendus quos facere maiores omnis. Nesciunt cupiditate explicabo earum eum libero inventore, maxime dolor qui magnam. Nam, voluptas eaque!
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor minus voluptatibus sequi impedit quasi odio numquam laborum delectus, corrupti repellat saepe tenetur error quisquam asperiores cum, voluptates in fugiat nesciunt.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, fugit? Illum adipisci numquam ab repellat corporis. Magni nihil sapiente asperiores ipsum veritatis vero tenetur aspernatur. Doloremque quidem facere repudiandae laborum!
+                    <div className={'home-txt text-justify'}>
+                        <div className="mb-3">
+                        Esta es una aplicación basada en Redux, la cual hace posible lo siguiente:
+                        </div>
+                        
+                        <ol className={'font-italic'}>Listar publicaciones creadas por un usuario</ol>
+                        <ol className={'font-italic'}>Crear una nueva publicación</ol>
+                        <ol className={'font-italic'}>Registrar a un usuario</ol>
+                        <ol className={'font-italic'}>Hacer login</ol>
+                        <ol className={'font-italic'}>Hacer logout</ol>
+
+                        <div className="mb-3">
+                        Conecta mediante API RestFul a un servidor Node, el cuál a su vez comunica con una base de datos en Atlas (MongoDB), maneja sesiones mediante JWT, donde se tiene una constante verificación del token y su respectiva dunción "refresh" para aumentar la caducidad siempre y cuando el usuario se encuentre activo, el tiempo de vencimiento de un token inactivo es de 1 hora.
+                        </div>
+                    </div>
                 </div>
             </CardBody>
         )

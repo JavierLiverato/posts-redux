@@ -10,6 +10,8 @@ import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 import SimpleReactValidator from 'simple-react-validator';
 import { reactValidatorOptions } from '../../helpers/simpleReactValidator';
 import { Alert } from "rsuite";
+import { APP_NAME } from '../../config/config';
+import { Redirect } from 'react-router-dom';
 
 /**
  * Login Component ( full view Login component, render a login
@@ -50,7 +52,7 @@ export class Login extends Component {
     setLogin = (e) => {
         e.preventDefault();
         if (this.loginValidator.allValid()) {
-            const {username, password} = this.state;
+            const { username, password } = this.state;
             let userData = {
                 email: username,
                 password
@@ -66,9 +68,9 @@ export class Login extends Component {
         return (
             <CardBody>
                 <form action="" id="login-validation"
-                    className="col-md-4 col-sm-5 col-xs-11 col-lg-4  center-margin"
+                    className="col-md-4 col-sm-5 col-xs-11 col-lg-4 container-sm"
                     onSubmit={this.setLogin}>
-
+                    <h2 className={'mb-5'}>{APP_NAME}</h2>
                     <InputForm
                         placeholder={"Email"}
                         icon={"icon-user"}
@@ -91,9 +93,9 @@ export class Login extends Component {
                     />
                     <PrimaryButton
                         color={"light"}
-                        txtBtn={"Ingresar"}
-                        sizeWidth={"15rem"}>
+                        txtBtn={"Ingresar"}>
                     </PrimaryButton>
+                    <a href="/">ir al inicio</a>
                 </form>
             </CardBody>
         )
@@ -111,4 +113,4 @@ const mapStateToProps = (state) => ({
     errorReducer: state.errorReducer
 })
 
-export default connect(mapStateToProps,{loginUser})(Login)
+export default connect(mapStateToProps, { loginUser })(Login)

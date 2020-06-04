@@ -9,6 +9,7 @@ import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 
 import { storeUser } from "../../actions/usersActions";
 import { reactValidatorOptions } from '../../helpers/simpleReactValidator';
+import { APP_NAME } from '../../config/config';
 
 /**
  * Users Component ( full view for register new user )
@@ -68,57 +69,50 @@ export class Users extends Component {
             <CardBody>
                 <div className={this.props.className}>
                     <form action="" id="login-validation"
-                        className="col-12"
+                        className="col-12 container-sm"
                         onSubmit={this.setRegister}>
-                        <div className="row">
-                            <div className="col-sm-12 col-md-6 ">
-                                <InputForm
-                                    id="userName"
-                                    type={"text"}
-                                    placeholder={"Nombre de usuario"}
-                                    className="form-control large"
-                                    onChange={this.onChangeCustomInput()}
-                                    onKeyDown={'userName'}
-                                    value={this.state.userName}
-                                    validator={this.validator}
-                                    validateOptions={'required|min:3'}
-                                />
-                            </div>
-                            <div className="col-sm-12 col-md-6 ">
-                                <InputForm
-                                    id="email"
-                                    type={"text"}
-                                    placeholder={"Email"}
-                                    className="form-control large"
-                                    onChange={this.onChangeCustomInput()}
-                                    onKeyDown={'email'}
-                                    value={this.state.email}
-                                    validator={this.validator}
-                                    validateOptions={'required'}
-                                />
-                            </div>
-                            <div className="col-sm-12 col-md-6 ">
-                                <InputForm
-                                    id="password"
-                                    type={"text"}
-                                    placeholder={"Constraseña"}
-                                    className="form-control large"
-                                    onChange={this.onChangeCustomInput()}
-                                    onKeyDown={'password'}
-                                    value={this.state.password}
-                                    validator={this.validator}
-                                    validateOptions={'required|min:6'}
-                                />
-                            </div>
+                        <h2 className={'mb-5'}>{APP_NAME}</h2>
+                        <InputForm
+                            id="userName"
+                            type={"text"}
+                            placeholder={"Nombre de usuario"}
+                            className="form-control large"
+                            onChange={this.onChangeCustomInput()}
+                            onKeyDown={'userName'}
+                            value={this.state.userName}
+                            validator={this.validator}
+                            validateOptions={'required|min:3'}
+                        />
 
-                            <div className="col col-12">
-                                <PrimaryButton
-                                    txtBtn={"Guardar"}
-                                    sizeWidth={"10rem"}
-                                >
-                                </PrimaryButton>
-                            </div>
-                        </div>
+                        <InputForm
+                            id="email"
+                            type={"text"}
+                            placeholder={"Email"}
+                            className="form-control large"
+                            onChange={this.onChangeCustomInput()}
+                            onKeyDown={'email'}
+                            value={this.state.email}
+                            validator={this.validator}
+                            validateOptions={'required'}
+                        />
+
+                        <InputForm
+                            id="password"
+                            type={"text"}
+                            placeholder={"Constraseña"}
+                            className="form-control large"
+                            onChange={this.onChangeCustomInput()}
+                            onKeyDown={'password'}
+                            value={this.state.password}
+                            validator={this.validator}
+                            validateOptions={'required|min:6'}
+                        />
+
+                        <PrimaryButton
+                            txtBtn={"Guardar"}
+                        >
+                        </PrimaryButton>
+                        <a href="/">ir al inicio</a>
                     </form>
                 </div>
             </CardBody>

@@ -41,14 +41,46 @@
   height: 40px;
 }
 
+.btn-action {
+  width: 6rem;
+  height: 30px;
+  line-height: 10px;
+  font-size: 14px;
+  font-weight: 400 !important;
+}
+
+.btn-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .btn-paginator {
     width: 6rem;
     height: 30px;
     line-height: 10px;
     font-size: 14px;
-    background-color: white;
+    background-color: white !important;
     color: black;
     border-color: darkgray;
+    font-weight: 400 !important;
+}
+
+.btn-primary {
+  background-color: #34c3ff;
+  border-color: #34c3ff;
+  font-weight: bold;
+}
+
+.container-sm {
+  max-width: 25rem;
+  background-color: #e7e7ea;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 1rem 5rem 1rem;
+  height: 80vh;
+  border: 3px solid #9f9f9f7d;
+  border-radius: 5px;
 }
 
 .cst-container{
@@ -61,6 +93,10 @@
   margin-top: 46vh;
   width: 4rem;
   height: 4rem;
+}
+
+.home-txt {
+  font-size: 1.1rem;
 }
 
 .page-container{

@@ -1,5 +1,5 @@
 //set app name to all project
-export const APP_NAME = process.env.name || 'TEST';
+export const APP_NAME = process.env.name || 'POSTS APP';
 
 //token prefix eg. 'Bearer ' or 'Token '
 export const TOKEN_PREFIX = 'Token ';

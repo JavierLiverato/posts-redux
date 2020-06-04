@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { API_ENDPOINT, defaultResponses } from "../config/config";
 import { SUCCESS_STORE_USER, GET_ERRORS } from "./types";
+import { Alert } from "rsuite";
 
  /**
  * Register user
@@ -12,7 +13,7 @@ export const storeUser = (history, data) => async(dispatch) => {
     await axios.post(API_ENDPOINT + '/users/', data)
         .then(res => {
             const { message } = res.data.result;
-            alert(message)
+            Alert.success(message, 4000);
             dispatch({type: SUCCESS_STORE_USER});
             if (history) history.push({pathname: '/', state: {message: 'Bienvenido'}})
         })

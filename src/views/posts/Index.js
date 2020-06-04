@@ -95,7 +95,7 @@ export class Posts extends Component {
                                             id={post._id}
                                             txtBtn={"borrar"}
                                             onPress={e => this.delete(e, post._id)}
-                                            className={'btn-paginator bg-danger text-white'}
+                                            className={'btn-action bg-danger text-white'}
                                             sizeWidth={"5rem"}
                                         >
                                         </Button>

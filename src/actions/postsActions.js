@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { API_ENDPOINT, defaultResponses } from "../config/config";
 import { GET_POSTS, SUCCESS_STORE_POST, SUCCESS_DELETE_POST, GET_ERRORS } from "./types";
+import { Alert } from "rsuite";
 
  /**
  * Get all or query filtered user posts
@@ -38,7 +39,7 @@ export const storePost = (history, data) => async(dispatch) => {
     await axios.post(API_ENDPOINT + '/posts/', data)
         .then(res => {
             const { message } = res.data.result;
-            alert(message)
+            Alert.success(message, 4000);
             dispatch({type: SUCCESS_STORE_POST});
             if (history) history.push({pathname: '/posts', state: {message: 'Bienvenido'}})
         })
