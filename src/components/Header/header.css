@@ -1,0 +1,10 @@
+.rs-navbar-header{
+    width: 0px;
+    transition: width 0.5s;
+}
+
+@media (max-width: 600px) {
+    .rs-navbar-header{
+        width: 56px;
+    }
+} 

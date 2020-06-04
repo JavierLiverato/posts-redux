@@ -1,0 +1,16 @@
+.btn {
+    border-radius: 0 !important;
+}
+
+.btn-label{
+    left: 0;
+}
+
+.btn-text {
+    padding-left: 1rem;
+    line-height: 33px;
+}
+
+.green {
+    background-color: #439c73 !important;
+}

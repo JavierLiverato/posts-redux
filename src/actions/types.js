@@ -1,0 +1,10 @@
+export const GET_ERRORS = 'GET_ERRORS';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
+
+export const SET_CURRENT_USER = 'SET_CURRENT_USER';
+export const SUCCESS_STORE_USER = 'SUCCESS_STORE_USER';
+
+export const GET_POSTS = 'GET_POSTS';
+export const SUCCESS_STORE_POST = 'SUCCESS_STORE_POST';
+export const SUCCESS_DELETE_POST = 'SUCCESS_DELETE_POST';
+
